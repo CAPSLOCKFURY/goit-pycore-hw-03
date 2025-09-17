@@ -8,7 +8,7 @@ def get_numbers_ticket(min: int, max: int, quantity: int) -> list[int]:
     return sorted(numbers)
 
 def validate_input(min: int, max: int, quantity: int) -> None:
-    if min > 1:
+    if min < 1:
         raise ValueError("Minimal ticket number must be greater than 1")
     elif max > 1000:
         raise ValueError("Maximum ticket number must be less than 1000")
